@@ -7,7 +7,10 @@ SECRET_KEY = 'django-insecure-cd$a2ix+y8u(1vq#fj4!=sj0fm47ru^s5+0=%dmww(9p9-gkqv
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'trocasenhatransfacil.pythonanywhere.com',
+]
 
 
 # Application definition
@@ -98,6 +101,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = 'static/'
+STATIC_ROOT = 'security_test/bait-form/static/bait-form'
 
 # Default primary key field type
 

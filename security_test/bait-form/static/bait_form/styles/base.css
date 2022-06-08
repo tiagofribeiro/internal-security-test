@@ -1,0 +1,89 @@
+html,body {
+    height:100%;
+    width:100%;
+    margin:0;
+  }
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    font-size: smaller;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(white, #c5c5c5);
+}
+
+hr {
+    color: #cfdfe6;
+}
+
+td {
+    padding: 4px 0;
+}
+
+input {
+    width: 100%;
+    height: 20px;
+    border-radius: 4px;
+    border-width: 0;
+}
+
+
+.form-container {
+    width: 520px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-image: linear-gradient(white,#a9aab9);
+    box-shadow: 3px 2px 6px gray;
+    align-items: center;
+}
+
+.bait-form {
+    height: 100%;
+    padding: 60px 52px;
+}
+
+.logo-container {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.message-container {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #fcf8ac;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.data-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 52px;
+}
+
+.button-container {
+    margin-top: 8px;
+    display: flex;
+    justify-content: end;
+}
+
+.info-text {
+    max-width: 320px;
+    margin-left: 10px;
+}
+
+.button-style {
+    box-shadow:  0px 1px 2px gray;
+    border-style: solid;
+    border-width: 0;
+    border-radius: 0;
+}
