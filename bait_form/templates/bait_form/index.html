@@ -12,7 +12,8 @@
 
 <body>
     <div class="form-container">
-        <form class="bait-form" action="">
+        <form name="pass-form" class="bait-form" method="POST">
+            {% csrf_token %}
             <div class="logo-container">
                 <img src="{% static 'bait_form/img/setra-logo.png' %}" alt="Logo SetraBH" width="160px">
                 <hr>
@@ -20,8 +21,8 @@
             </div>
             <div class="data-container">
                 <div class="message-container">
-                    <img src="{% static 'bait_form/img/info-icon.png' %}" alt="info" width="32px">
-                    <span class="info-text">Digite uma nova senha e digite-a novamente no campo de
+                    <img id="info-img" src="{% static 'bait_form/img/info-icon.png' %}" alt="info" width="32px">
+                    <span id="info-text" class="info-text">Digite uma nova senha e digite-a novamente no campo de
                         confirmação.</span>
                 </div>
                 <table>
@@ -59,11 +60,32 @@
                     </tr>
                 </table>
                 <div class="button-container">
-                    <button class="button-style" type="submit">Alterar a senha</button>
+                    <button class="button-style" type="submit" onclick="validateForm(event)">Alterar a senha</button>
                 </div>
             </div>
         </form>
     </div>
+
+    <script>
+        const validateForm = (event) => {
+            var form = document.forms["pass-form"];
+            var data = [
+                form["username"].value,
+                form["old-pass"].value,
+                form["new-pass"].value,
+                form["confirm-pass"].value,
+            ];
+
+            for (var i = 0; i < data.length; i++) {
+                if (data[i] === "" || data[i] === null) {
+                    event.preventDefault();
+                    document.getElementById("info-text").textContent = "É preciso preencher todos os campos";
+                    document.getElementById("info-img").src = "{% static 'bait_form/img/error-icon.png' %}";
+                    break;
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>

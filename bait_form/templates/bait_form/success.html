@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sucesso!</title>
+    <link rel="stylesheet" href="{% static 'bait_form/styles/base.css' %}">
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="bait-form">
+            <div class="logo-container">
+                <img src="{% static 'bait_form/img/setra-logo.png' %}" alt="Logo SetraBH" width="160px">
+                <hr>
+                <img src="{% static 'bait_form/img/tf-logo.png' %}" alt="Logo Transfacil" width="160px">
+            </div>
+            <div class="data-container">
+                <div class="message-container">
+                    <img id="sucess-img" src="{% static 'bait_form/img/success-icon.png' %}" alt="info" width="32px">
+                    <span id="info-text" class="info-text">Sua senha foi alterada com sucesso!</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
