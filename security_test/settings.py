@@ -101,7 +101,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = 'static/'
-STATIC_ROOT = 'security_test/bait-form/static/bait-form'
+STATIC_ROOT = 'security_test/bait_form/static/bait_form'
 
 # Default primary key field type
 
